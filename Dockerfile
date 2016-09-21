@@ -1,9 +1,9 @@
 FROM clojure
 COPY ./docker/profiles.clj /root/.lein/profiles.clj
-WORKDIR /usr/src/common-cli
+WORKDIR /usr/src/app
 
-COPY project.clj /usr/src/common-cli/
+COPY project.clj /usr/src/app/
 RUN lein deps
 
-COPY . /usr/src/common-cli
-CMD ["lein", "test"]
+COPY . /usr/src/app
+CMD ["lein", "test2junit"]
