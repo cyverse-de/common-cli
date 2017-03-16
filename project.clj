@@ -1,4 +1,4 @@
-(defproject org.cyverse/common-cli "2.8.1"
+(defproject org.cyverse/common-cli "2.8.2-SNAPSHOT"
   :description "Common CLI functions for the DE backend services and tools"
   :url "http://github.com/cyverse-de/common-cli"
   :license {:name "BSD"}
