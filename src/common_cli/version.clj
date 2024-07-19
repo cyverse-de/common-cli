@@ -11,7 +11,7 @@
 
 (defn jar-file-stream
   [path-in-jar]
-  (URI. (str "jar:" (jar-domain) path-in-jar)))
+  (.openStream (.toURL (URI. (str "jar:" (jar-domain) path-in-jar)))))
 
 (defn slurp-manifest
   []
