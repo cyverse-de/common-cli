@@ -4,7 +4,9 @@
   :license {:name "BSD"}
   :deploy-repositories [["releases" :clojars]
                         ["snapshots" :clojars]]
-  :plugins [[test2junit "1.2.2"]]
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/tools.cli "0.3.2"]
+  :plugins [[jonase/eastwood "1.4.3"]
+            [lein-ancient "0.7.0"]
+            [test2junit "1.4.4"]]
+  :dependencies [[org.clojure/clojure "1.11.3"]
+                 [org.clojure/tools.cli "1.1.230"]
                  [trptcolin/versioneer "0.2.0"]])

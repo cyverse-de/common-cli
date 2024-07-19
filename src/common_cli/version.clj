@@ -1,5 +1,6 @@
 (ns common-cli.version
-  (:require [trptcolin.versioneer.core :as version]))
+  (:require [trptcolin.versioneer.core :as version])
+  (:import [java.net URI]))
 
 (defn jar-domain
   []
@@ -10,11 +11,7 @@
 
 (defn jar-file-stream
   [path-in-jar]
-  (.openStream
-   (java.net.URL.
-    (str "jar:"
-         (jar-domain)
-         path-in-jar))))
+  (.openStream (.toURL (URI. (str "jar:" (jar-domain) path-in-jar)))))
 
 (defn slurp-manifest
   []
